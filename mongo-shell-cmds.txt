@@ -1,0 +1,21 @@
+# Lists all dbs
+show dbs
+
+#Create a db named todo and use it
+use todo
+
+# Lists all collections in the current db
+show collections
+
+# Create a collection in the current db
+db.createCollection("todos")
+
+# Create a new record in a collection
+db.todos.insert({task: 'Create Presentation'});
+db.todos.insert({task: 'Create a demo app'});
+
+# List all records in a collection
+db.todos.find().pretty()
+
+# Remove all records in a collection
+db.todos.remove({})
